@@ -3620,3 +3620,355 @@ body::after {
 .social-link:hover .social-icon {
     text-shadow: 0 0 10px var(--theme);
 }
+/* =========================================
+   PRINTING & GIFTS
+========================================= */
+
+.printing-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.printing-intro {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    margin-bottom: 70px;
+}
+
+.printing-text {
+    padding: 35px;
+    border: 1px solid rgba(var(--theme-rgb), 0.18);
+    background: rgba(5, 8, 22, 0.65);
+    backdrop-filter: blur(12px);
+}
+
+.printing-label {
+    color: var(--theme);
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.printing-text h3 {
+    font-size: clamp(30px, 4vw, 52px);
+    margin: 18px 0;
+    line-height: 1.05;
+}
+
+.printing-text h3 span {
+    display: block;
+    color: var(--theme);
+}
+
+.printing-text p {
+    color: #8d9bb0;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.printing-highlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.printing-highlight div {
+    padding: 25px;
+    border: 1px solid rgba(var(--theme-rgb), 0.18);
+    background: rgba(var(--theme-rgb), 0.03);
+    transition: 0.3s ease;
+}
+
+.printing-highlight div:hover {
+    border-color: var(--theme);
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(var(--theme-rgb), 0.12);
+}
+
+.printing-highlight strong {
+    display: block;
+    color: var(--theme);
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.printing-highlight span {
+    color: #8d9bb0;
+    font-size: 11px;
+}
+
+
+/* CATEGORY */
+
+.printing-category {
+    margin-top: 65px;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.category-title span {
+    color: var(--theme);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.category-title h3 {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+
+/* PRINTING CARDS */
+
+.printing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.printing-card {
+    position: relative;
+    padding: 25px;
+    min-height: 155px;
+    border: 1px solid rgba(var(--theme-rgb), 0.15);
+    background: rgba(5, 8, 22, 0.65);
+    transition: 0.35s ease;
+    overflow: hidden;
+}
+
+.printing-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 2px;
+    background: var(--theme);
+    box-shadow: 0 0 15px var(--theme);
+    transition: 0.35s ease;
+}
+
+.printing-card:hover::before {
+    width: 100%;
+}
+
+.printing-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(var(--theme-rgb), 0.5);
+    box-shadow: 0 12px 35px rgba(0,0,0,.35);
+}
+
+.printing-card > span {
+    color: rgba(var(--theme-rgb), 0.55);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.printing-card h4 {
+    color: #fff;
+    margin: 12px 0 8px;
+    font-size: 15px;
+}
+
+.printing-card p {
+    color: #7f8da3;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* DESIGN SERVICES */
+
+.design-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.design-services div {
+    padding: 12px 18px;
+    border: 1px solid rgba(var(--theme-rgb), 0.25);
+    color: var(--theme);
+    background: rgba(var(--theme-rgb), 0.03);
+    font-size: 10px;
+    letter-spacing: 1px;
+    transition: .3s ease;
+}
+
+.design-services div:hover {
+    background: var(--theme);
+    color: #050816;
+}
+
+
+/* FOOTER */
+
+.printing-footer {
+    margin-top: 70px;
+    padding: 45px;
+    text-align: center;
+    border: 1px solid rgba(var(--theme-rgb), 0.2);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(var(--theme-rgb), 0.08),
+            rgba(5, 8, 22, 0.8)
+        );
+}
+
+.printing-footer h3 {
+    color: var(--theme);
+    font-size: clamp(22px, 3vw, 36px);
+    margin-bottom: 12px;
+}
+
+.printing-footer p {
+    color: #8d9bb0;
+}
+
+.printing-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.printing-tags span {
+    padding: 8px 13px;
+    border: 1px solid rgba(var(--theme-rgb), 0.25);
+    color: #aeb8c7;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .printing-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .printing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .printing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .printing-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    .printing-text {
+        padding: 25px;
+    }
+
+    .printing-footer {
+        padding: 30px 20px;
+    }
+
+}
+/* PRINTING SHOWCASE */
+
+.printing-showcase {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 35px;
+    margin: 60px 0;
+    padding: 18px;
+    border: 1px solid rgba(var(--theme-rgb), 0.2);
+    background: rgba(5, 8, 22, 0.7);
+}
+
+.showcase-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 420px;
+    border: 1px solid rgba(var(--theme-rgb), 0.15);
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.printing-showcase:hover .showcase-image img {
+    transform: scale(1.03);
+}
+
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.showcase-content h3 {
+    font-size: clamp(28px, 4vw, 45px);
+    line-height: 1.05;
+    margin: 18px 0;
+}
+
+.showcase-content h3 span {
+    display: block;
+    color: var(--theme);
+}
+
+.showcase-content p {
+    color: #8d9bb0;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+.showcase-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.showcase-list div {
+    padding: 11px;
+    border-left: 2px solid var(--theme);
+    background: rgba(var(--theme-rgb), 0.04);
+    color: #b5bfce;
+    font-size: 10px;
+}
+
+@media (max-width: 800px) {
+
+    .printing-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-image {
+        min-height: 300px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .showcase-list {
+        grid-template-columns: 1fr;
+    }
+
+}
